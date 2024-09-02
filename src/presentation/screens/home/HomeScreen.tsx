@@ -3,6 +3,7 @@ import {Pressable, ScrollView, Text, View} from 'react-native';
 import {MenuTop} from '../../components/home';
 import {colors} from '../../../config/theme/theme';
 import {categoriesFruits} from '../../../data/data';
+import {CarouselFruits} from '../../components/home/CarouselFruits';
 
 export const HomeScreen = () => {
   const [activeCategory, setActiveCategory] = useState('Naranjas');
@@ -45,6 +46,7 @@ export const HomeScreen = () => {
             );
           })}
         </ScrollView>
+        <CarouselFruits />
       </View>
     </View>
   );
