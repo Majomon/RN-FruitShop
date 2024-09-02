@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import {Pressable, ScrollView, Text, View} from 'react-native';
-import {MenuTop} from '../../components/home';
-import {colors} from '../../../config/theme/theme';
-import {categoriesFruits, featuredFruits} from '../../../data/data';
-import {CarouselFruits} from '../../components/home/CarouselFruits';
-import {FruiCardSale} from '../../components/home/FruiCardSale';
+import React, { useState } from 'react';
+import { Pressable, ScrollView, Text, View } from 'react-native';
+import { colors } from '../../../config/theme/theme';
+import { categoriesFruits, featuredFruits } from '../../../data/data';
+import { MenuTop } from '../../components/home';
+import { CarouselFruits } from '../../components/home/CarouselFruits';
+import { FruitCardSale } from '../../components/home/FruitCardSale';
 
 export const HomeScreen = () => {
   const [activeCategory, setActiveCategory] = useState('Naranjas');
@@ -59,7 +59,7 @@ export const HomeScreen = () => {
             showsHorizontalScrollIndicator={false}
             style={{overflow: 'visible'}}>
             {[...featuredFruits].reverse().map((fruit, index) => (
-              <FruiCardSale fruit={fruit} key={index} />
+              <FruitCardSale fruit={fruit} key={index} />
             ))}
           </ScrollView>
         </View>
