@@ -2,13 +2,14 @@ import React, {useState} from 'react';
 import {Pressable, ScrollView, Text, View} from 'react-native';
 import {MenuTop} from '../../components/home';
 import {colors} from '../../../config/theme/theme';
-import {categoriesFruits} from '../../../data/data';
+import {categoriesFruits, featuredFruits} from '../../../data/data';
 import {CarouselFruits} from '../../components/home/CarouselFruits';
+import {FruiCardSale} from '../../components/home/FruiCardSale';
 
 export const HomeScreen = () => {
   const [activeCategory, setActiveCategory] = useState('Naranjas');
   return (
-    <View className="flex-1 bg-orange-50 my-1">
+    <ScrollView className="flex-1 bg-orange-50 my-1">
       <MenuTop />
       <View className="mt-4">
         <Text
@@ -46,8 +47,23 @@ export const HomeScreen = () => {
             );
           })}
         </ScrollView>
+        {/* Carousel */}
         <CarouselFruits />
+        {/* Hot sales */}
+        <View className="mt-8 pl-5 space-y-1">
+          <Text className="text-xl font-bold" style={{color: colors.text}}>
+            Hot Sales
+          </Text>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            style={{overflow: 'visible'}}>
+            {[...featuredFruits].reverse().map((fruit, index) => (
+              <FruiCardSale fruit={fruit} key={index} />
+            ))}
+          </ScrollView>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
