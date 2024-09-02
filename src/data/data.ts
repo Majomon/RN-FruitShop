@@ -24,6 +24,15 @@ export interface FeaturedItem {
   subtleColor: string;
 }
 
+export interface CartItems {
+  name: string;
+  price: string;
+  qty: number;
+  desc: string;
+  shadow: string;
+  image: any;
+}
+
 export const featuredFruits: FeaturedItem[] = [
   {
     name: 'Manzana',
@@ -74,6 +83,49 @@ export const featuredFruits: FeaturedItem[] = [
     image: require('../assets/fruits/naranja.png'),
     // color: opacity => `rgba(255, 165, 0, ${opacity})`,
     subtleColor: '#fcbc75',
+  },
+];
+
+export const cartItem: CartItems[] = [
+  {
+    name: 'Manzana',
+    price: '1.50',
+    qty: 10,
+    desc: 'Una fruta dulce y crujiente.',
+    shadow: '#ff9999',
+    image: require('../assets/fruits/manzana.png'),
+  },
+  {
+    name: 'Banana',
+    price: '0.50',
+    qty: 20,
+    desc: 'Una fruta suave y dulce.',
+    shadow: '#f2ff41',
+    image: require('../assets/fruits/banana.png'),
+  },
+  {
+    name: 'Piña',
+    price: '2.00',
+    qty: 5,
+    desc: 'Una fruta tropical y jugosa.',
+    shadow: '#f1fb49',
+    image: require('../assets/fruits/piña.png'),
+  },
+  {
+    name: 'Cereza',
+    price: '3.00',
+    qty: 15,
+    desc: 'Una fruta pequeña y dulce.',
+    shadow: '#f9a8a8',
+    image: require('../assets/fruits/cereza.png'),
+  },
+  {
+    name: 'Naranja',
+    price: '1.20',
+    qty: 12,
+    desc: 'Una fruta cítrica y refrescante.',
+    shadow: '#fcbc75',
+    image: require('../assets/fruits/naranja.png'),
   },
 ];
 

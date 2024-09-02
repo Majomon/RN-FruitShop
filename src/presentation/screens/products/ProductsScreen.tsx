@@ -50,6 +50,7 @@ export const ProductsScreen = ({route, navigation}: Props) => {
         <View className="flex-row justify-between items-center">
           <Text className="text-3xl">$ {fruit.price}</Text>
           <TouchableOpacity
+            onPress={() => navigation.navigate("CartScreen")} 
             className="text-3xl p-3 ml-6 flex-1 rounded-xl"
             style={{backgroundColor: fruit.shadow, opacity: 0.6}}>
             <Text className="text-xl text-center text-white font-bold">
