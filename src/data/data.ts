@@ -38,7 +38,7 @@ export const featuredFruits: FeaturedItem[] = [
   {
     name: 'Banana',
     price: '0.50',
-    star: 4.7,
+    star: 4,
     desc: 'Una fruta suave y dulce.',
     shadow: '#fff700',
     image: require('../assets/fruits/banana.png'),
@@ -48,7 +48,7 @@ export const featuredFruits: FeaturedItem[] = [
   {
     name: 'Piña',
     price: '2.00',
-    star: 4.8,
+    star: 5,
     desc: 'Una fruta tropical y jugosa.',
     shadow: '#e6df0a',
     image: require('../assets/fruits/piña.png'),
@@ -58,7 +58,7 @@ export const featuredFruits: FeaturedItem[] = [
   {
     name: 'Cereza',
     price: '3.00',
-    star: 4.9,
+    star: 1.5,
     desc: 'Una fruta pequeña y dulce.',
     shadow: '#e94a4a',
     image: require('../assets/fruits/cereza.png'),
@@ -68,7 +68,7 @@ export const featuredFruits: FeaturedItem[] = [
   {
     name: 'Naranja',
     price: '1.20',
-    star: 4.6,
+    star: 3,
     desc: 'Una fruta cítrica y refrescante.',
     shadow: '#f87717',
     image: require('../assets/fruits/naranja.png'),

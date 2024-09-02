@@ -4,6 +4,7 @@ import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {RootStackParams} from '../../navigation/StackNavigator';
 import {MyIcon} from '../../components/ui/MyIcon';
 import {colors} from '../../../config/theme/theme';
+import {StartRating} from '../../components/products/StartRating';
 
 interface Props extends StackScreenProps<RootStackParams, 'ProductScreen'> {}
 
@@ -38,12 +39,23 @@ export const ProductsScreen = ({route, navigation}: Props) => {
             Sold <Text className="text-gray-800 font-extrabold">239</Text>
           </Text>
         </View>
-        <View style={{height: 165}}>
+        <StartRating star={fruit.star} />
+        <View style={{maxHeight: 165}}>
           <Text style={{color: colors.text}} className="tracking-wider py-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A, animi
             rem doloribus error, dolore fugit facilis vero iste mollitia illo
             sit, unde voluptas totam. Dolorum quod nisi ut! Ducimus, accusamus!
           </Text>
+        </View>
+        <View className="flex-row justify-between items-center">
+          <Text className="text-3xl">$ {fruit.price}</Text>
+          <TouchableOpacity
+            className="text-3xl p-3 ml-6 flex-1 rounded-xl"
+            style={{backgroundColor: fruit.shadow, opacity: 0.6}}>
+            <Text className="text-xl text-center text-white font-bold">
+              Add to cart
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
